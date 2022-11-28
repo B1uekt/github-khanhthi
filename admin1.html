@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/styleXSP.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+	<h1 class = "text-center" style="margin: 24px">TRANG QUẢN LÝ SẢN PHẨM</h1>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-1 ">
+				<div class="list-group mt-4">
+					<a href="admin1.html" class="list-group-item list-group-item-action">Edit Product</a> 
+					<a href="admin2.html"class="list-group-item list-group-item-action ">Edit User</a> 
+					<a href="admin3.html"class="list-group-item list-group-item-action ">Edit Order</a> 
+					<a href="ThongKe.html" class="list-group-item list-group-item-action ">Thống kê</a>
+				</div>
+			</div>
+			<div class="col-lg-11 ">
+			<table style="width:100%" class="table">
+					<tr style="height: 50px">
+						<th>Số thứ tự</th>
+						<th>Tên sản phẩm</th>
+						<th>Mã sản phẩm</th>
+						<th>Khả dụng</th>
+						<th>Tồn</th>
+						<th>Loại</th>
+						<th>Nhà cung cấp</th>
+						<th>Ảnh</th>
+					</tr>
+					<tr style="height: 50px">
+						<th>1</th>
+						<th>Polo Nauy</th>
+						<th>#001</th>
+						<th>12</th>
+						<th>20</th>
+						<th>Polo</th>
+						<th>Nauy</th>
+						<th><img alt="ảnh polo" src="images/1.jpeg" style="width: 35px; height: 50px" ></th>
+					</tr>
+					<tr style="height: 50px">
+						<th>2</th>
+						<th>Blazer Spain</th>
+						<th>#002</th>
+						<th>10</th>
+						<th>5</th>
+						<th>Blazer</th>
+						<th>Spain</th>
+						<th><img alt="ảnh polo" src="images/2.jpeg" style="width: 35px; height: 50px" ></th>
+					</tr>
+					<tr style="height: 50px">
+						<th>3</th>
+						<th>Tee US</th>
+						<th>#003</th>
+						<th>4</th>
+						<th>12</th>
+						<th>Tee</th>
+						<th>Us</th>
+						<th><img alt="ảnh polo" src="images/3.jpeg" style="width: 35px; height: 50px" ></th>
+					</tr>
+			</table>
+			<button type="button" class="btn btn-success">Thêm sản phẩm</button>
+			<button type="button" class="btn btn-success open-modal-btn123">Xóa sản phẩm</button>
+			<div class="modal123 hide container">
+				<div class="modal_inner123">
+				  <div class="modal_header123">
+					<p></p>
+					<i class="fa-solid fa-xmark"></i>
+				  </div>
+				  <div class="modal_body123">
+					<h2>Bạn có muốn xóa sản phẩm này không ?</h2>
+				  </div>
+				  <div class="modal_footer123">
+					<button>Có</button>
+					<button>Không</button>
+				  </div>
+				</div>
+			  </div>
+			<button type="button" class="btn btn-success">Sửa sản phẩm</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var btnOpen = document.querySelector('.open-modal-btn123')
+	var modal = document.querySelector('.modal123')
+	var iconClose = document.querySelector('.modal_header123 i')
+	function toggleModal(e){
+	  console.log(e.target);
+	  modal.classList.toggle('hide')
+	}
+	btnOpen.addEventListener('click', toggleModal)
+	iconClose.addEventListener('click', toggleModal)
+	modal.addEventListener('click', function(e){
+	  if(e.target==currenTarget){
+		toggleModal()
+	  }
+	})
+  
+  </script>
+</html>
