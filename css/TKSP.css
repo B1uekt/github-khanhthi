@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    height: 100vh;
+    overflow:hidden;
+  }
+  th {
+    text-align: center;
+  }
+  .inp{
+    justify-content: space-between;
+  }
+  .inp label{
+    margin: 20px;
+  }
+  .inp input{
+    width: 30%;
+    margin: 10px;
+  }
