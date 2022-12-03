@@ -21,7 +21,7 @@
     width: 500px;
     position: relative;
     top: 50%;
-    left: 10%;
+    left: 18%;
     transform: translate(-50%, -50%);
     margin: auto;
     background: white;
@@ -70,3 +70,36 @@
   .hide{
     display: none;
   }
+  tr{
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    align-items: center;
+    top: -50%
+  }
+  table tr th{
+      font-weight: 400;
+      text-align: center;
+  }
+  table tr#non-h{
+      font-size: 18px;
+  }
+  table tr:hover{
+      background: rgba(255, 191, 0, 0.5);
+  }
+  table tr#non-h:hover{
+      background: white;
+  }
+  th p{
+      text-decoration: underline;
+      color:rgba(0, 113, 179, 1);
+      cursor: pointer;
+      text-align: center;
+      padding-left: 12px;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: black;
+    cursor: pointer;
+    
+}
