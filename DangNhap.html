@@ -41,9 +41,23 @@
 					Ghi nhớ tài khoản này
 				</label>
 			</div>
-			<button class="w-100 btn btn-lg btn-primary" type="submit">Đăng nhập</button>
+			<!-- <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="dangNhapAdmin()">Đăng nhập</button> -->
+			<input type="button"  class="w-100 btn btn-lg btn-primary" onclick="dangNhapAdmin()"value="Đăng nhập" >
 			<a href="DangKy2.html">Đăng ký tài khoản mới</a>
 		</form>
 	</main>	
 </body>
 </html>
+
+<script>
+	function dangNhapAdmin()
+	{
+		ten= document.getElementById("tenDangNhap").value;
+		mk= document.getElementById("matKhau").value;
+		if(ten=="admin"&&mk=="123")
+		{
+			window.location.assign("ThongKe.html")
+		}
+	}
+
+</script>
